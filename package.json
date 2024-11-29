@@ -1,0 +1,37 @@
+{
+  "name": "toraco-corp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "pages:build": "next build",
+    "pages:deploy": "wrangler pages deploy .next"
+  },
+  "dependencies": {
+    "next": "^14.2.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "microcms-js-sdk": "^3.1.2",
+    "remixicon": "^4.5.0",
+    "swr": "^2.2.5"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.6",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.1.1",
+    "sass": "^1.81.0",
+    "typescript": "^5.7.2",
+    "wrangler": "^3.91.0"
+  }
+}

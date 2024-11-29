@@ -1,0 +1,52 @@
+.text {
+  margin: 0;
+  color: #333;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.span {
+  display: inline;
+  font-size: inherit;
+  line-height: inherit;
+}

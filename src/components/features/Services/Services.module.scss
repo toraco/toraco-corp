@@ -1,0 +1,209 @@
+@import '@/styles/variables.scss';
+
+.sectionTitle {
+  text-align: center;
+  color: $color-secondary-dark;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.serviceGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.groupTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.groupIcon {
+  font-size: 1.8rem !important;
+  color: $color-primary;
+}
+
+.groupTitle {
+  font-size: 1.8rem;
+  color: $color-secondary-dark;
+  margin: 0;
+}
+
+.serviceCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  color: $color-secondary-dark;
+}
+
+.serviceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: $color-secondary;
+
+    &:before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: $color-primary;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.description {
+  color: $color-secondary;
+  line-height: 1.6;
+}
+
+.communityContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: left;
+
+  .description,
+  .serviceList {
+    width: 100%;
+  }
+}
+
+.joinButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #5865f2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  width: fit-content;
+
+  i {
+    font-size: 1.25rem;
+    color: white;
+    margin: 0;
+  }
+
+  &:hover {
+    background-color: #4752c4;
+  }
+}
+
+.youtubeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ff0000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  width: fit-content;
+
+  i {
+    font-size: 1.25rem;
+    color: white;
+    margin: 0;
+  }
+
+  &:hover {
+    background-color: #cc0000;
+  }
+}
+
+.topics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.topic {
+  background-color: rgba($color-primary, 0.1);
+  padding: 1rem;
+  border-radius: 4px;
+  color: $color-secondary-dark;
+  font-weight: 500;
+  text-align: center;
+
+  i {
+    font-size: 1.5rem;
+    color: $color-primary;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.features {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  i {
+    font-size: 1.5rem;
+    color: $color-primary;
+    flex-shrink: 0;
+  }
+
+  div {
+    h4 {
+      margin: 0 0 0.25rem;
+      font-size: 1rem;
+      color: $color-secondary-dark;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: $color-secondary;
+      line-height: 1.4;
+    }
+  }
+}
+
+.communityAndYoutube {
+  display: grid;
+  gap: 2rem;
+  margin-top: 4rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

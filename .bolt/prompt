@@ -1,0 +1,27 @@
+# Packages
+
+Use yarn as the package manager.
+Use the latest version of TypeScript.
+Use the latest version in 18.x of React.
+Use the latest version in 14.x of Next.js.
+Use css modules for setting styles.
+Use icons from Remix Icon.
+Use microCMS and the JavaScript SDK.
+Use wrangler, @cloudflare/next-on-pages and other necessary packages to deploy the app to Cloudflare Pages.
+Use eslint and prettier to format codes.
+
+# Directory structure
+
+```
+src
+ |- components
+ |  |- features
+ |  |- ui
+ |     |- Header
+ |        |- Header.tsx
+ |        |- Header.module.scss
+ |        |- index.ts
+ |- hooks
+ |- pages
+ |- services 
+ ```
