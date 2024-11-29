@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 
+import { Typography } from '@/components/ui/Typography';
+
 import styles from './Section.module.scss';
 
 type SectionProps = {
@@ -8,6 +10,7 @@ type SectionProps = {
   variant?: 'light' | 'dark';
   className?: string;
   fullWidth?: boolean;
+  title: string;
 };
 
 export const Section = ({
@@ -16,6 +19,7 @@ export const Section = ({
   variant = 'light',
   className = '',
   fullWidth = false,
+  title,
 }: SectionProps) => {
   const combinedClassName = [
     styles.section,
@@ -28,6 +32,9 @@ export const Section = ({
 
   return (
     <section id={id} className={combinedClassName}>
+      <Typography variant="h2" className={styles.sectionTitle}>
+        {title}
+      </Typography>
       <div className={styles.container}>{children}</div>
     </section>
   );

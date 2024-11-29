@@ -18,9 +18,7 @@ const Home: NextPage<HomeProps> = ({ news }) => {
       <main>
         <Hero />
         <Services />
-        <section id="news">
-          <NewsList news={news} />
-        </section>
+        <NewsList news={news} />
         <About />
       </main>
     </Layout>

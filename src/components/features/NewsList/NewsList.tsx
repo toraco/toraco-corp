@@ -1,3 +1,5 @@
+import { Section } from '@/components/ui/Section';
+import { Typography } from '@/components/ui/Typography';
 import type { News } from '@/domains/news';
 
 import { NewsItem } from './NewsItem';
@@ -9,10 +11,12 @@ type NewsListProps = {
 
 export const NewsList = ({ news }: NewsListProps) => {
   return (
-    <div className={styles.container}>
-      {news.map((item) => (
-        <NewsItem key={item.id} news={item} />
-      ))}
-    </div>
+    <Section id="news" title="News">
+      <div className={styles.container}>
+        {news.map((item) => (
+          <NewsItem key={item.id} news={item} />
+        ))}
+      </div>
+    </Section>
   );
 };
