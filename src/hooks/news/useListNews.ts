@@ -12,12 +12,8 @@ export type NewsListResponse = {
 
 export const useListNews = () => {
   const { data, error, isLoading } = useSWR<NewsListResponse>(
-    'news-list',
-    getNewsList,
-    {
-      revalidateOnFocus: false,
-      revalidateOnReconnect: false,
-    }
+    ['/news'],
+    getNewsList
   );
 
   return {

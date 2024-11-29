@@ -1,9 +1,8 @@
-import { Section } from '@/components/ui/Section';
-import { Typography } from '@/components/ui/Typography';
-import type { News } from '@/domains/news';
-
 import { NewsItem } from './NewsItem';
 import styles from './NewsList.module.scss';
+import { Section } from '@/components/ui/Section';
+import type { News } from '@/domains/news';
+
 
 type NewsListProps = {
   news: News[];

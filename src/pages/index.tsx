@@ -44,4 +44,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   }
 };
 
+// To enable Edge Runtime for Cloudflare Pages
+export const runtime = 'experimental-edge';
+
 export default Home;

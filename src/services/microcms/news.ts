@@ -1,7 +1,7 @@
-import type { News } from '@/domains/news';
 
 import { client } from './client';
 import { isConfigValid } from './config';
+import type { News } from '@/domains/news';
 
 const DEFAULT_LIST_RESPONSE = {
   contents: [],

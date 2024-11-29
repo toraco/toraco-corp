@@ -1,7 +1,6 @@
-import { Section } from '@/components/ui/Section';
-import { Typography } from '@/components/ui/Typography';
-
 import styles from './About.module.scss';
+import { Section } from '@/components/ui/Section';
+
 
 export const About = () => {
   return (

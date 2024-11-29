@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
+import styles from './NewsList.module.scss';
 import { Typography } from '@/components/ui/Typography';
 import type { News } from '@/domains/news';
 import { formatDate } from '@/utils/date';
 
-import styles from './NewsList.module.scss';
 
 type NewsItemProps = {
   news: News;

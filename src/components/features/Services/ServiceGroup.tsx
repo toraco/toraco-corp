@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 
+import styles from './Services.module.scss';
 import { Icon } from '@/components/ui/Icon';
 import { Spacer } from '@/components/ui/Spacer';
 import { Typography } from '@/components/ui/Typography';
 
-import styles from './Services.module.scss';
 
 type ServiceGroupProps = {
   title: string;

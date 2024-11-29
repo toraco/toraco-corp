@@ -1,10 +1,10 @@
-import { Section } from '@/components/ui/Section';
-import { Typography } from '@/components/ui/Typography';
 
 import { ServiceCard } from './ServiceCard';
 import { ServiceGroup } from './ServiceGroup';
 import { ServiceList } from './ServiceList';
 import styles from './Services.module.scss';
+import { Section } from '@/components/ui/Section';
+import { Typography } from '@/components/ui/Typography';
 
 export const Services = () => {
   return (
