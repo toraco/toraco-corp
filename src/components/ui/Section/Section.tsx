@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
+import styles from './Section.module.scss';
 import { Typography } from '@/components/ui/Typography';
 
-import styles from './Section.module.scss';
 
 type SectionProps = {
   children: ReactNode;
