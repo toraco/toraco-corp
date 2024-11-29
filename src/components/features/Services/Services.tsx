@@ -8,11 +8,7 @@ import styles from './Services.module.scss';
 
 export const Services = () => {
   return (
-    <Section id="services" variant="dark">
-      <Typography variant="h2" className={styles.sectionTitle}>
-        Services
-      </Typography>
-
+    <Section id="services" variant="dark" title="Services">
       <ServiceGroup title="得意とする開発" icon="code-box-line" useGrid>
         <ServiceCard title="Webアプリケーション・システム開発">
           <div className={styles.serviceContent}>

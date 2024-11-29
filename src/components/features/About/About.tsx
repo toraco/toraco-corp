@@ -5,11 +5,7 @@ import styles from './About.module.scss';
 
 export const About = () => {
   return (
-    <Section id="about">
-      <Typography variant="h2" className={styles.sectionTitle}>
-        About
-      </Typography>
-
+    <Section id="about" title="About">
       <div className={styles.tableWrapper}>
         <table className={styles.table}>
           <tbody>
