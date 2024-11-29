@@ -1,5 +1,4 @@
 import { createClient } from 'microcms-js-sdk';
-
 import { MICROCMS_CONFIG, isConfigValid } from './config';
 
 // Only create the client if configuration is valid

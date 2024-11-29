@@ -1,5 +1,4 @@
 import type { GetServerSideProps, NextPage } from 'next';
-
 import { About } from '@/components/features/About';
 import { Hero } from '@/components/features/Hero';
 import { NewsList } from '@/components/features/NewsList';

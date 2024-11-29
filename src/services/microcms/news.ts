@@ -1,4 +1,3 @@
-
 import { client } from './client';
 import { isConfigValid } from './config';
 import type { News } from '@/domains/news';
