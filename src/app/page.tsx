@@ -8,12 +8,12 @@ export default async function Page() {
   const response = await getNewsList();
 
   return (
-    <div>
+    <>
       <Hero />
       <Services />
       <NewsList news={response.contents} />
       <About />
-    </div>
+    </>
   );
 }
 
