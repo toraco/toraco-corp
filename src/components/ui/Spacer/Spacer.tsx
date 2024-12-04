@@ -6,11 +6,7 @@ type SpacerProps = {
   style?: CSSProperties;
 };
 
-export const Spacer = ({
-  size,
-  axis = 'vertical',
-  style = {},
-}: SpacerProps) => {
+const Spacer = ({ size, axis = 'vertical', style = {} }: SpacerProps) => {
   const width = axis === 'horizontal' ? `${size}rem` : undefined;
   const height = axis === 'vertical' ? `${size}rem` : undefined;
 
@@ -26,3 +22,5 @@ export const Spacer = ({
     />
   );
 };
+
+export default Spacer;

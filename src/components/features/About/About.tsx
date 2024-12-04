@@ -1,8 +1,7 @@
 import styles from './About.module.scss';
 import { Section } from '@/components/ui/Section';
 
-
-export const About = () => {
+const About = () => {
   return (
     <Section id="about" title="About">
       <div className={styles.tableWrapper}>
@@ -48,3 +47,5 @@ export const About = () => {
     </Section>
   );
 };
+
+export default About;

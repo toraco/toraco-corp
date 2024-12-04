@@ -7,7 +7,7 @@ type NewsItemProps = {
   news: News;
 };
 
-export const NewsItem = ({ news }: NewsItemProps) => {
+const NewsItem = ({ news }: NewsItemProps) => {
   return (
     <article className={styles.newsItem}>
       <div className={styles.imageWrapper}>
@@ -36,3 +36,5 @@ export const NewsItem = ({ news }: NewsItemProps) => {
     </article>
   );
 };
+
+export default NewsItem;

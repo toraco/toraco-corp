@@ -1,9 +1,11 @@
 import styles from './Hero.module.scss';
 
-export const Hero = () => {
+const Hero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.content} />
     </div>
   );
 };
+
+export default Hero;

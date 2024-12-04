@@ -1,12 +1,11 @@
 import { ReactNode } from 'react';
-
 import styles from './Services.module.scss';
 
 type ServiceListProps = {
   items: ReactNode[];
 };
 
-export const ServiceList = ({ items }: ServiceListProps) => {
+const ServiceList = ({ items }: ServiceListProps) => {
   return (
     <ul className={styles.serviceList}>
       {items.map((item, index) => (
@@ -15,3 +14,5 @@ export const ServiceList = ({ items }: ServiceListProps) => {
     </ul>
   );
 };
+
+export default ServiceList;

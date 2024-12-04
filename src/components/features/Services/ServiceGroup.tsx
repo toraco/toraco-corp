@@ -1,10 +1,8 @@
 import { ReactNode } from 'react';
-
 import styles from './Services.module.scss';
 import { Icon } from '@/components/ui/Icon';
 import { Spacer } from '@/components/ui/Spacer';
 import { Typography } from '@/components/ui/Typography';
-
 
 type ServiceGroupProps = {
   title: string;
@@ -13,7 +11,7 @@ type ServiceGroupProps = {
   useGrid?: boolean;
 };
 
-export const ServiceGroup = ({
+const ServiceGroup = ({
   title,
   icon,
   children,
@@ -34,3 +32,5 @@ export const ServiceGroup = ({
     </div>
   );
 };
+
+export default ServiceGroup;

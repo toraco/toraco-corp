@@ -1,16 +1,14 @@
 import { ReactNode } from 'react';
-
 import styles from './Services.module.scss';
 import { Spacer } from '@/components/ui/Spacer';
 import { Typography } from '@/components/ui/Typography';
-
 
 type ServiceCardProps = {
   title?: string;
   children: ReactNode;
 };
 
-export const ServiceCard = ({ title, children }: ServiceCardProps) => {
+const ServiceCard = ({ title, children }: ServiceCardProps) => {
   return (
     <div className={styles.card}>
       {title && (
@@ -25,3 +23,5 @@ export const ServiceCard = ({ title, children }: ServiceCardProps) => {
     </div>
   );
 };
+
+export default ServiceCard;
