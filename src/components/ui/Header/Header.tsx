@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Header.module.scss';
 
@@ -6,8 +7,8 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <img
-            src="/images/toraco-icon.png"
+          <Image
+            src="/images/toraco-icon.webp"
             alt="toraco株式会社"
             width={40}
             height={40}
