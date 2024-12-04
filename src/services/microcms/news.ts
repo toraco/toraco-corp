@@ -1,5 +1,4 @@
 import { client } from './client';
-import { isConfigValid } from './config';
 import type { News } from '@/domains/news';
 
 const DEFAULT_LIST_RESPONSE = {
@@ -17,7 +16,7 @@ export type NewsListResponse = {
 };
 
 export const getNewsList = async (): Promise<NewsListResponse> => {
-  if (!isConfigValid() || !client) {
+  if (!client) {
     console.error('microCMS configuration is missing');
     return DEFAULT_LIST_RESPONSE;
   }
@@ -37,7 +36,7 @@ export const getNewsList = async (): Promise<NewsListResponse> => {
 export const getNewsDetail = async (
   contentId: string
 ): Promise<News | null> => {
-  if (!isConfigValid() || !client) {
+  if (!client) {
     console.error('microCMS configuration is missing');
     return null;
   }
