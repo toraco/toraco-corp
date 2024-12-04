@@ -1,12 +1,9 @@
+import styles from './Services.module.scss';
+import { ServiceCard, ServiceGroup, ServiceList } from '.';
 import { Section } from '@/components/ui/Section';
 import { Typography } from '@/components/ui/Typography';
 
-import { ServiceCard } from './ServiceCard';
-import { ServiceGroup } from './ServiceGroup';
-import { ServiceList } from './ServiceList';
-import styles from './Services.module.scss';
-
-export const Services = () => {
+const Services = () => {
   return (
     <Section id="services" variant="dark" title="Services">
       <ServiceGroup title="得意とする開発" icon="code-box-line" useGrid>
@@ -176,3 +173,5 @@ export const Services = () => {
     </Section>
   );
 };
+
+export default Services;

@@ -1,8 +1,7 @@
+import classNames from 'classnames';
 import { ReactNode } from 'react';
-
-import { Typography } from '@/components/ui/Typography';
-
 import styles from './Section.module.scss';
+import { Typography } from '@/components/ui/Typography';
 
 type SectionProps = {
   children: ReactNode;
@@ -13,7 +12,7 @@ type SectionProps = {
   title: string;
 };
 
-export const Section = ({
+const Section = ({
   children,
   id,
   variant = 'light',
@@ -21,17 +20,13 @@ export const Section = ({
   fullWidth = false,
   title,
 }: SectionProps) => {
-  const combinedClassName = [
-    styles.section,
-    styles[variant],
-    fullWidth && styles.fullWidth,
-    className,
-  ]
-    .filter(Boolean)
-    .join(' ');
-
   return (
-    <section id={id} className={combinedClassName}>
+    <section
+      id={id}
+      className={classNames(styles.section, styles[variant], className, {
+        [styles.fullWidth]: fullWidth,
+      })}
+    >
       <Typography variant="h2" className={styles.sectionTitle}>
         {title}
       </Typography>
@@ -39,3 +34,5 @@ export const Section = ({
     </section>
   );
 };
+
+export default Section;
