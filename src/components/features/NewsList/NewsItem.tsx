@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './NewsList.module.scss';
 import { Typography } from '@/components/ui/Typography';
 import type { News } from '@/domains/news';
@@ -12,7 +13,7 @@ const NewsItem = ({ news }: NewsItemProps) => {
     <article className={styles.newsItem}>
       <div className={styles.imageWrapper}>
         {news.thumbnail && (
-          <img
+          <Image
             src={news.thumbnail.url}
             alt={news.title}
             className={styles.thumbnail}
