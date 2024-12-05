@@ -1,5 +1,4 @@
-import { client } from './client';
-import { isConfigValid } from './config';
+import { createClient } from 'microcms-js-sdk';
 import type { News } from '@/domains/news';
 
 const DEFAULT_LIST_RESPONSE = {
@@ -16,8 +15,15 @@ export type NewsListResponse = {
   limit: number;
 };
 
-export const getNewsList = async (): Promise<NewsListResponse> => {
-  if (!isConfigValid() || !client) {
+export const getNewsList = async ({
+  serviceDomain,
+  apiKey,
+}: {
+  serviceDomain: string;
+  apiKey: string;
+}): Promise<NewsListResponse> => {
+  const client = createClient({ serviceDomain, apiKey });
+  if (!client) {
     console.error('microCMS configuration is missing');
     return DEFAULT_LIST_RESPONSE;
   }
@@ -34,10 +40,17 @@ export const getNewsList = async (): Promise<NewsListResponse> => {
   }
 };
 
-export const getNewsDetail = async (
-  contentId: string
-): Promise<News | null> => {
-  if (!isConfigValid() || !client) {
+export const getNewsDetail = async ({
+  contentId,
+  serviceDomain,
+  apiKey,
+}: {
+  contentId: string;
+  serviceDomain: string;
+  apiKey: string;
+}): Promise<News | null> => {
+  const client = createClient({ serviceDomain, apiKey });
+  if (!client) {
     console.error('microCMS configuration is missing');
     return null;
   }
