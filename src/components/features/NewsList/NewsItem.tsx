@@ -18,6 +18,8 @@ const NewsItem = ({ news }: NewsItemProps) => {
             alt={news.title}
             className={styles.thumbnail}
             sizes="(max-width: 768px) 100vw, 50vw"
+            fill
+            unoptimized
           />
         )}
       </div>
