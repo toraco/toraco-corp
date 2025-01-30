@@ -8,9 +8,9 @@ import { getNewsList } from '@/services/microcms';
 export const runtime = 'edge';
 
 export default async function Page() {
-  const env = getRequestContext().env;
-  const serviceDomain = env.MICROCMS_SERVICE_DOMAIN ?? '';
-  const apiKey = env.MICROCMS_API_KEY ?? '';
+  // c.f. https://developers.cloudflare.com/pages/framework-guides/nextjs/ssr/troubleshooting/#top-level-getrequestcontext
+  const serviceDomain = getRequestContext().env.MICROCMS_SERVICE_DOMAIN;
+  const apiKey = getRequestContext().env.MICROCMS_API_KEY;
   const response = await getNewsList({ serviceDomain, apiKey });
 
   return (
