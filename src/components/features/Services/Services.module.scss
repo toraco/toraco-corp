@@ -6,6 +6,7 @@
 }
 
 .groupTitleWrapper {
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -13,12 +14,12 @@
 
 .groupIcon {
   font-size: 1.8rem !important;
-  color: $color-primary;
+  color: $black;
 }
 
 .groupTitle {
   font-size: 1.8rem;
-  color: $color-secondary-dark;
+  color: $black;
   margin: 0;
 }
 
@@ -37,7 +38,7 @@
 
 .cardTitle {
   font-size: 1.4rem;
-  color: $color-secondary-dark;
+  color: $black;
 }
 
 .serviceList {
@@ -49,13 +50,13 @@
     position: relative;
     padding-left: 1.5rem;
     margin-bottom: 0.5rem;
-    color: $color-secondary;
+    color: $black;
 
     &:before {
       content: '•';
       position: absolute;
       left: 0;
-      color: $color-primary;
+      color: $black;
     }
 
     &:last-child {
@@ -65,7 +66,7 @@
 }
 
 .description {
-  color: $color-secondary;
+  color: $black;
   line-height: 1.6;
 }
 
@@ -138,16 +139,16 @@
 }
 
 .topic {
-  background-color: rgba($color-primary, 0.1);
+  background-color: rgba($black, 0.1);
   padding: 1rem;
   border-radius: 4px;
-  color: $color-secondary-dark;
+  color: $black;
   font-weight: 500;
   text-align: center;
 
   i {
     font-size: 1.5rem;
-    color: $color-primary;
+    color: $black;
     margin-bottom: 0.5rem;
   }
 }
@@ -170,7 +171,7 @@
 
   i {
     font-size: 1.5rem;
-    color: $color-primary;
+    color: $black;
     flex-shrink: 0;
   }
 
@@ -178,14 +179,14 @@
     h4 {
       margin: 0 0 0.25rem;
       font-size: 1rem;
-      color: $color-secondary-dark;
+      color: $black;
       font-weight: 600;
     }
 
     p {
       margin: 0;
       font-size: 0.9rem;
-      color: $color-secondary;
+      color: $black;
       line-height: 1.4;
     }
   }
