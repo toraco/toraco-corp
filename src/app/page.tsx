@@ -21,5 +21,4 @@ export default async function Page() {
   );
 }
 
-// To enable Edge Runtime for Cloudflare Pages
 export const runtime = 'edge';
