@@ -6,7 +6,6 @@ import { Typography } from '@/components/ui/Typography';
 type SectionProps = {
   children: ReactNode;
   id?: string;
-  variant?: 'light' | 'dark';
   className?: string;
   fullWidth?: boolean;
   title: string;
@@ -15,7 +14,6 @@ type SectionProps = {
 const Section = ({
   children,
   id,
-  variant = 'light',
   className = '',
   fullWidth = false,
   title,
@@ -23,7 +21,7 @@ const Section = ({
   return (
     <section
       id={id}
-      className={classNames(styles.section, styles[variant], className, {
+      className={classNames(styles.section, className, {
         [styles.fullWidth]: fullWidth,
       })}
     >
