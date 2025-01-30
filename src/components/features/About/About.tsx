@@ -30,8 +30,8 @@ const About = () => {
               <td>稲垣 貴映</td>
             </tr>
             <tr>
-              <th>従業員数</th>
-              <td>3名</td>
+              <th>資本金</th>
+              <td>300万円</td>
             </tr>
             <tr>
               <th>所在地</th>

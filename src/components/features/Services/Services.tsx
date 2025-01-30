@@ -5,7 +5,7 @@ import { Typography } from '@/components/ui/Typography';
 
 const Services = () => {
   return (
-    <Section id="services" variant="dark" title="Services">
+    <Section id="services" title="Services">
       <ServiceGroup title="得意とする開発" icon="code-box-line" useGrid>
         <ServiceCard title="Webアプリケーション・システム開発">
           <div className={styles.serviceContent}>
