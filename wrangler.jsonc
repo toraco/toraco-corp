@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "toraco-corp",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-06-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "MICROCMS_SERVICE_DOMAIN": "toraco-corp"
+  },
+  // 本番ドメイン。初回デプロイ前に toraco.jp を Cloudflare Pages から解放しておくこと。
+  // 詳細は README の「デプロイ移行」を参照。
+  "routes": [{ "pattern": "toraco.jp", "custom_domain": true }]
+}
