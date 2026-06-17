@@ -1,46 +1,58 @@
 {
   "name": "toraco-corp",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.7.0",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
+    "build:dryrun": "tsc --noEmit",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "preview": "yarn pages:build && wrangler pages dev",
-    "deploy": "yarn pages:build && wrangler pages deploy"
+    "test": "vitest run --config vitest.config.ts --passWithNoTests",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
-    "classnames": "2.5.1",
-    "microcms-js-sdk": "3.1.2",
-    "next": "14.2.19",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "remixicon": "4.5.0"
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.8.0",
+    "microcms-js-sdk": "^3.1.2",
+    "next": "^16.2.6",
+    "next-themes": "^0.4.6",
+    "radix-ui": "^1.4.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwind-merge": "^3.5.0",
+    "tw-animate-css": "^1.4.0"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "1.13.6",
-    "@cloudflare/workers-types": "4.20241127.0",
-    "@types/node": "20.10.5",
-    "@types/react": "18.2.45",
-    "@types/react-dom": "18.2.18",
-    "@typescript-eslint/eslint-plugin": "6.15.0",
-    "@typescript-eslint/parser": "6.15.0",
-    "eslint": "8.56.0",
-    "eslint-config-next": "14.0.4",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-next-on-pages": "1.13.6",
-    "prettier": "3.1.1",
-    "sass": "1.81.0",
-    "typescript": "5.7.2",
-    "vercel": "39.1.1",
-    "wrangler": "3.91.0"
-  },
-  "overrides": {
-    "vercel": "$vercel"
-  },
-  "packageManager": "yarn@1.22.21"
+    "@cloudflare/workers-types": "^4.20251225.0",
+    "@eslint/js": "^9.28.0",
+    "@opennextjs/cloudflare": "^1.0.0",
+    "@tailwindcss/postcss": "^4.2.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.28.0",
+    "eslint-config-next": "^16.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.5.0",
+    "tailwindcss": "^4.2.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.50.0",
+    "vite-tsconfig-paths": "^6.0.0",
+    "vitest": "^4.0.16",
+    "wrangler": "^4.19.0"
+  }
 }

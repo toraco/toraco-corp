@@ -1,0 +1,4 @@
+# ローカル開発用の環境変数（`.dev.vars` にコピーして使う）。
+# 本番では MICROCMS_API_KEY は `wrangler secret put` で投入する。
+MICROCMS_SERVICE_DOMAIN=toraco-corp
+MICROCMS_API_KEY=your_microcms_api_key_here
