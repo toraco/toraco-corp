@@ -5,7 +5,7 @@ import type { Work } from '@/domains/works';
 export const works: Work[] = [
   {
     slug: 'etoe',
-    title: 'サウナ&ホテル「etoe」予約・施設管理プラットフォーム',
+    title: 'etoe sauna & hotel 予約・施設管理プラットフォーム',
     summary:
       '宿泊予約から施設運営までを一気通貫で支える PMS を、フロントエンドからクラウドインフラまで内製しました。',
     isAnonymous: false,

@@ -141,7 +141,7 @@ export const services: Service[] = [
     ],
     examples: [
       {
-        title: 'サウナ&ホテル「etoe」の運用監視・AI 一次調査自動化',
+        title: 'etoe sauna & hotel の運用監視・AI 一次調査自動化',
         description:
           'エラーログを検知して Slack に即時通知し、生成 AI（Claude）がソースコードを横断調査して原因仮説・影響範囲・修正方針を同じスレッドへ自動投稿。GitHub Issue 化までを自動化し、障害対応の初動を高速化しました。',
       },
