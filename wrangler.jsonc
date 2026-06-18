@@ -10,7 +10,9 @@
     "binding": "ASSETS"
   },
   "vars": {
-    "MICROCMS_SERVICE_DOMAIN": "toraco-corp"
+    // Amazon SES（自動返信メール）の非機密設定。認証情報は `wrangler secret put` で投入する。
+    "SES_REGION": "ap-northeast-1",
+    "SES_FROM_ADDRESS": "noreply@toraco.jp"
   },
   // 本番ドメイン。初回デプロイ前に toraco.jp を Cloudflare Pages から解放しておくこと。
   // 詳細は README の「デプロイ移行」を参照。

@@ -8,7 +8,7 @@
 
 ## 1. Visual Theme & Atmosphere
 
-「"やりたい" という原動力をテクノロジーで実現する」をミッションに掲げる開発会社のコーポレートサイト。受託開発・Web 高速化・ラボ型開発に加え、エンジニアコミュニティと YouTube「とらゼミ」を運営する。技術的な信頼感と、挑戦を後押しする前向きさを両立させる。
+「"やりたい" という原動力をテクノロジーで実現する」をミッションに掲げる開発会社のコーポレートサイト。受託開発・ラボ型開発に加え、テスト自動化・AI駆動開発・運用監視自動化を提供し、開発事例（Works）を掲載する。YouTube「とらゼミ」での技術発信も行う。技術的な信頼感と、挑戦を後押しする前向きさを両立させる。
 
 | 属性                | 値                                                                  |
 | ------------------- | ------------------------------------------------------------------- |
@@ -282,7 +282,7 @@ text-wrap: balance;            /* 見出しの孤立助詞防止 */
 
 #### Brand Icons（lucide にないもの）
 
-Discord・YouTube などのブランドマークは lucide に含まれないため、**inline SVG（[simple-icons](https://simpleicons.org/) 由来のパス）** をラップした専用コンポーネントで対応する。
+YouTube・X・GitHub・Zenn などのブランドマークは lucide に含まれないため、**inline SVG（[simple-icons](https://simpleicons.org/) 由来のパス）** をラップした専用コンポーネント（`BrandIcon`）で対応する。
 
 #### Icon Migration Map（remixicon → lucide）
 
@@ -303,8 +303,9 @@ Discord・YouTube などのブランドマークは lucide に含まれないた
 | `ri-time-line`                | `Clock`             | （汎用）                  |
 | `ri-user-smile-line`          | `Smile`             | toC 向け Web サービス     |
 | `ri-folder-line`              | `Folder`            | （汎用）                  |
-| `ri-discord-line`             | **brand SVG**       | コミュニティ参加          |
-| `ri-youtube-line`             | **brand SVG**       | YouTube チャンネル        |
+| `ri-youtube-line`             | **brand SVG**       | YouTube チャンネル（とらゼミ） |
+
+> Discord / コミュニティ案内は廃止。フッターの SNS は YouTube / X / GitHub / Zenn を `BrandIcon` で表示する。
 
 ---
 
@@ -335,8 +336,8 @@ Discord・YouTube などのブランドマークは lucide に含まれないた
 ### Site Layout
 
 - **Container**: 中央寄せ `max-w-screen-lg`（1024px）、左右パディング モバイル lg(16px) / `lg` 以上 xl(24px)
-- **Header**: 上部固定 or 通常配置。ロゴ（左）+ ナビ（Services / News / About / Contact）+ テーマ切替。モバイルはハンバーガー → ドロワー
-- **Footer**: ロゴ、コピーライト、SNS（Discord / YouTube）、各種リンク
+- **Header**: 上部固定。ロゴ（左）+ ナビ（Services / Works / About / News / Contact）+ テーマ切替。モバイルはハンバーガー → ドロワー（Sheet）
+- **Footer**: ロゴ、コピーライト、SNS（YouTube / X / GitHub / Zenn）、各種リンク
 - **Sections**: `id` アンカー（`#services` 等）でナビからスクロール。セクション間は 3xl〜4xl の余白
 - **Hero / 背景帯**: フル幅。内側コンテンツはコンテナ幅
 
@@ -448,14 +449,14 @@ Discord・YouTube などのブランドマークは lucide に含まれないた
 | toC 向け Web サービス          | Brand Blue        | `Smile`            |
 | toB 向け SaaS                  | Brand Blue        | `Building2`        |
 | 社内システム・管理画面         | Neutral           | `LayoutDashboard`  |
-| Web サイト高速化               | Brand Gold        | `Gauge`            |
-| CDN・グローバル配信            | Brand Blue        | `Globe`            |
 | ラボ型開発・チーム             | Brand Gold        | `Users`            |
 | 品質の担保                     | Success           | `ShieldCheck`      |
 | 料金・コスト                   | Neutral           | `CircleDollarSign` |
 | API 開発                       | Brand Blue        | `Server`           |
 | 生成 AI 開発                   | Brand Gold        | `Bot`              |
-| コミュニティ（Discord）        | `#5865F2`（brand）| brand SVG (Discord)|
+| テスト自動化                   | Brand Gold        | `FlaskConical`     |
+| AI駆動開発                     | Brand Gold        | `Bot`              |
+| 運用監視自動化                 | Brand Blue        | `Activity`         |
 | YouTube「とらゼミ」            | `#FF0000`（brand）| brand SVG (YouTube)|
 
 ---
@@ -470,4 +471,4 @@ Discord・YouTube などのブランドマークは lucide に含まれないた
 | `src/components/ui/`              | shadcn/ui プリミティブ                            |
 | `components.json`                 | shadcn 設定（new-york / lucide）                  |
 | `public/meta/`                    | favicon・manifest 等のメタアセット                |
-| `public/images/`                  | ロゴ・ヒーロー画像                                |
+| `public/images/`                  | ロゴ・ヒーロー画像・代表者写真（`profile.webp`） |
