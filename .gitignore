@@ -37,5 +37,8 @@ next-env.d.ts
 .open-next
 .dev.vars
 
+# 生成物（scripts/generate-news-data.mjs が build/test 前に再生成する）
+/src/content/news.generated.json
+
 /.idea/
 /.vscode/
