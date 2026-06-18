@@ -24,8 +24,6 @@ export type RepresentativePhoto = {
 export type Representative = {
   /** 氏名（漢字） */
   name: string;
-  /** ふりがな */
-  nameKana: string;
   /** ローマ字表記 */
   nameEn: string;
   /** 役職 */

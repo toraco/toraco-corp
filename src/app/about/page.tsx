@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
@@ -24,7 +23,7 @@ export default function AboutPage() {
       </Section>
 
       <Section className="border-t">
-        <SectionHeading en="Vision" ja="価値観" />
+        <SectionHeading en="Values" ja="価値観" />
         <ul className="mt-6 grid gap-4 sm:grid-cols-3">
           {company.values.map((value) => (
             <li key={value.title} className="rounded-xl border p-5">
@@ -72,7 +71,7 @@ export default function AboutPage() {
               </span>
             </p>
             <p className="text-sm text-muted-foreground">
-              {representative.nameKana}（{representative.nameEn}）
+              {representative.nameEn}
             </p>
             <div className="mt-2 flex max-w-2xl flex-col gap-2 text-pretty text-muted-foreground">
               {representative.bio.map((paragraph) => (
