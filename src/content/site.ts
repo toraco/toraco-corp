@@ -1,5 +1,8 @@
 import type { BrandName } from '@/components/ui/brand-icon';
 
+// Google Tag Manager コンテナ ID（公開値）。GA4 等の計測は GTM 内で構成する。
+export const gtmId = 'GTM-TGFL4CKQ';
+
 export type NavItem = {
   label: string;
   href: string;
