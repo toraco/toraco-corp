@@ -1,0 +1,17 @@
+# ローカル開発用のサーバ環境変数（`.dev.vars` にコピーして使う）。
+# 本番では機密値を `wrangler secret put <NAME>` で投入する。実値はコミットしないこと。
+
+# Slack Incoming Webhook（お問い合わせ通知の送信先）
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxx/yyy/zzz
+
+# Cloudflare Turnstile（サーバ側のトークン検証に使うシークレット）
+TURNSTILE_SECRET_KEY=your_turnstile_secret_key
+
+# Amazon SES（自動返信メール）の認証情報
+SES_ACCESS_KEY_ID=your_ses_access_key_id
+SES_SECRET_ACCESS_KEY=your_ses_secret_access_key
+
+# 非機密の SES 設定は wrangler.jsonc の vars で管理（SES_REGION / SES_FROM_ADDRESS）。
+# ローカルで上書きしたい場合のみ以下を設定する:
+# SES_REGION=ap-northeast-1
+# SES_FROM_ADDRESS=noreply@toraco.jp

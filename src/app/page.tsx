@@ -1,24 +1,19 @@
-import { getRequestContext } from '@cloudflare/next-on-pages';
-import { About } from '@/components/features/About';
-import { Hero } from '@/components/features/Hero';
-import { NewsList } from '@/components/features/NewsList';
-import { Services } from '@/components/features/Services';
-import { getNewsList } from '@/services/microcms';
+import { AboutExcerpt } from '@/components/sections/about-excerpt';
+import { ContactCTA } from '@/components/sections/contact-cta';
+import { Hero } from '@/components/sections/hero';
+import { NewsPreview } from '@/components/sections/news-preview';
+import { ServicesOverview } from '@/components/sections/services-overview';
+import { WorksExcerpt } from '@/components/sections/works-excerpt';
 
-export default async function Page() {
-  // c.f. https://developers.cloudflare.com/pages/framework-guides/nextjs/ssr/troubleshooting/#top-level-getrequestcontext
-  const serviceDomain = getRequestContext().env.MICROCMS_SERVICE_DOMAIN;
-  const apiKey = getRequestContext().env.MICROCMS_API_KEY;
-  const response = await getNewsList({ serviceDomain, apiKey });
-
+export default function Page() {
   return (
     <>
       <Hero />
-      <Services />
-      <NewsList news={response.contents} />
-      <About />
+      <ServicesOverview />
+      <WorksExcerpt />
+      <AboutExcerpt />
+      <NewsPreview />
+      <ContactCTA />
     </>
   );
 }
-
-export const runtime = 'edge';

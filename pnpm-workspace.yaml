@@ -1,0 +1,12 @@
+# pnpm のサプライチェーン保護: 公開から一定期間（= 1 日 = 1440 分）未満の
+# パッケージを拒否する。最新版が制限される場合は、条件を満たす旧版へ自動的に
+# ダウングレードして解決される。
+minimumReleaseAge: 1440
+
+# pnpm 10 以降、依存パッケージのビルドスクリプトは既定で実行されない。
+# ネイティブバイナリを持つ依存のビルドのみ明示的に許可する。
+allowBuilds:
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+  workerd: true

@@ -1,27 +1,24 @@
-export type Category = {
-  id: string;
-  name: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-};
+// 静的 News のドメインモデル（microCMS 廃止後はリポジトリ内で管理する）。
+// データと取得関数は `src/content/news.ts`、整形は `src/utils/date.ts` の formatDate。
 
-export type Thumbnail = {
-  url: string;
-  width: number;
-  height: number;
-};
+export const NEWS_CATEGORIES = [
+  'お知らせ',
+  'プレスリリース',
+  'イベント',
+  'メディア',
+] as const;
+
+export type NewsCategory = (typeof NEWS_CATEGORIES)[number];
 
 export type News = {
-  id: string;
+  /** URL スラッグ（`/news/[slug]`） */
+  slug: string;
   title: string;
-  content: string;
-  category: Category;
-  published_at: string;
-  thumbnail: Thumbnail;
-  createdAt: string;
-  updatedAt: string;
+  category: NewsCategory;
+  /** 公開日（ISO 8601 文字列） */
   publishedAt: string;
-  revisedAt: string;
+  /** 本文（Markdown） */
+  body: string;
+  /** サムネイル画像 URL（任意） */
+  thumbnail?: string;
 };
