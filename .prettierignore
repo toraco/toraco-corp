@@ -6,3 +6,4 @@ node_modules
 coverage
 pnpm-lock.yaml
 public
+src/content/news.generated.json
