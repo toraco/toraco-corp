@@ -29,6 +29,13 @@ describe('works コンテンツ', () => {
     expect(etoe?.url).toContain('etoehotel.com');
   });
 
+  it('etoe は運用監視（エラー検知・AI 一次調査）の取り組みを含む', () => {
+    const etoe = getWorkBySlug('etoe');
+    const text = [etoe?.solution, ...(etoe?.results ?? [])].join(' ');
+    expect(text).toMatch(/運用監視|一次調査/);
+    expect(etoe?.serviceSlugs).toContain('monitoring-automation');
+  });
+
   it('匿名事例は isAnonymous=true で業種が特定される語を含まない', () => {
     for (const slug of ['large-scale-platform', 'd2c-multi-brand']) {
       const work = getWorkBySlug(slug);

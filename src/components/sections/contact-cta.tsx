@@ -10,7 +10,7 @@ export function ContactCTA() {
           お気軽にご相談ください
         </h2>
         <p className="max-w-prose text-pretty text-muted-foreground">
-          開発のご相談、テスト自動化・AI駆動開発のご依頼、協業や採用まで。まずはお問い合わせフォームからご連絡ください。
+          開発のご相談、テスト自動化・AI駆動開発・運用監視自動化のご依頼、協業や採用まで。まずはお問い合わせフォームからご連絡ください。
         </p>
         <Button asChild size="lg">
           <Link href="/contact">お問い合わせ</Link>

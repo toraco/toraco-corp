@@ -10,7 +10,7 @@ import { getWorkBySlug } from '@/content/works';
 export const metadata: Metadata = {
   title: 'サービス',
   description:
-    '受託開発・ラボ型開発・Web高速化・テスト自動化・AI駆動開発。toraco が提供する開発サービスをご紹介します。',
+    '受託開発・ラボ型開発・テスト自動化・AI駆動開発・運用監視自動化。toraco が提供する開発サービスをご紹介します。',
 };
 
 export default function ServicesPage() {

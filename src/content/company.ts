@@ -30,7 +30,7 @@ export const company: Company = {
     {
       label: '事業内容',
       value:
-        'Web アプリケーション・システムの設計／開発／保守／運用、ラボ型開発、Web高速化、テスト自動化、AI駆動開発、YouTube「とらゼミ」運営',
+        'Web アプリケーション・システムの設計／開発／保守／運用、ラボ型開発、テスト自動化、AI駆動開発、運用監視自動化、YouTube「とらゼミ」運営',
     },
   ],
   representative: {

@@ -12,7 +12,7 @@ export function Hero() {
           テクノロジーで実現する。
         </h1>
         <p className="max-w-2xl text-pretty text-lg text-muted-foreground">
-          受託開発・ラボ型開発から、テスト自動化・AI駆動開発まで。toraco は「やりたいけどできない」を技術で解消し、挑戦を後押しします。
+          受託開発・ラボ型開発から、テスト自動化・AI駆動開発・運用監視自動化まで。toraco は「やりたいけどできない」を技術で解消し、挑戦を後押しします。
         </p>
         <div className="flex flex-wrap items-center gap-3">
           <Button asChild size="lg">

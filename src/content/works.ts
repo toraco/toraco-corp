@@ -14,11 +14,12 @@ export const works: Work[] = [
     challenge:
       'OTA と自社予約サイトの在庫を二重管理する負担や、入退室・清掃オペレーションの煩雑さといった、宿泊施設運営の現場課題を解消する必要がありました。',
     solution:
-      '宿泊予約フロント・施設管理画面・清掃スタッフ向け UI・物理入退室（スマートロック）連携を内製し、OTA チャネルマネージャ・Stripe 決済・LINE 連携を統合。インフラは AWS CDK でコード化し、在庫生成や滞在延長課金などの定型業務をサーバーレスで自動化しました。',
+      '宿泊予約フロント・施設管理画面・清掃スタッフ向け UI・物理入退室（スマートロック）連携を内製し、OTA チャネルマネージャ・Stripe 決済・LINE 連携を統合。インフラは AWS CDK でコード化し、在庫生成や滞在延長課金などの定型業務をサーバーレスで自動化しました。さらに本番運用では、エラーログを検知して Slack へ即時通知し、生成 AI が原因の一次調査までを自動で行う運用監視基盤も構築しています。',
     results: [
       '予約・在庫・決済・入退室・清掃を単一プラットフォームで一元管理',
       'OTA と自社予約の在庫同期を自動化し、二重管理を解消',
       'AWS CDK による IaC とサーバーレスで運用業務を自動化',
+      '生成 AI による運用監視（エラー検知・一次調査）で障害対応の初動を高速化',
     ],
     techTags: [
       'Next.js',
@@ -29,6 +30,7 @@ export const works: Work[] = [
       'AWS CDK',
       'ECS Fargate',
       'Lambda',
+      'CloudWatch',
       'Stripe',
       'LINE Messaging API',
     ],
@@ -39,8 +41,9 @@ export const works: Work[] = [
       'データベース設計',
       'AWS インフラ（IaC）',
       '外部システム連携',
+      '運用監視（可観測性）',
     ],
-    serviceSlugs: ['contract-development'],
+    serviceSlugs: ['contract-development', 'monitoring-automation'],
   },
   {
     slug: 'large-scale-platform',

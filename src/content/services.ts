@@ -55,36 +55,11 @@ export const services: Service[] = [
     workSlugs: ['large-scale-platform', 'd2c-multi-brand'],
   },
   {
-    slug: 'web-performance',
-    name: 'Web高速化',
-    tagline: 'ユーザー体験と SEO を両立する、Web サイトのパフォーマンス改善。',
-    description:
-      '最新のフロントエンド技術と CDN を活用し、高速で快適な Web サイトを構築します。表示速度の改善は、ユーザー体験と検索エンジン評価の両面で効果を発揮します。',
-    icon: 'Gauge',
-    features: [
-      {
-        title: 'モダンフロントエンド技術',
-        description: 'Next.js・React 等を活用した最適化',
-        icon: 'Code2',
-      },
-      {
-        title: 'CDN の活用',
-        description: '世界中どこでも高速なアクセスを実現',
-        icon: 'Globe',
-      },
-      {
-        title: '改善点の調査分析',
-        description: '詳細なパフォーマンス分析と改善提案',
-        icon: 'Gauge',
-      },
-    ],
-  },
-  {
     slug: 'test-automation',
     name: 'テスト自動化',
     tagline: 'E2E / VRT を CI に組み込み、手動 QA の負担を継続的に削減。',
     description:
-      'Playwright を用いた E2E テスト・ビジュアルリグレッションテスト（VRT）・LINE ミニアプリ（LIFF）テストを整備し、CI/CD に組み込みます。リリースのたびに繰り返される回帰テストを自動化し、品質を保ちながら開発スピードを高めます。AI（Claude Code / Playwright MCP）を活用してテスト生成を加速します。',
+      'Playwright を用いた E2E テスト・ビジュアルリグレッションテスト（VRT）を整備し、CI/CD に組み込みます。リリースのたびに繰り返される回帰テストを自動化し、品質を保ちながら開発スピードを高めます。AI（Claude Code / Playwright MCP）を活用してテスト生成を加速します。',
     icon: 'FlaskConical',
     features: [
       {
@@ -114,28 +89,64 @@ export const services: Service[] = [
   {
     slug: 'ai-driven-development',
     name: 'AI駆動開発',
-    tagline: '生成 AI を開発プロセスとプロダクトの両面に取り入れ、価値提供を加速。',
+    tagline: 'AI 駆動で開発できるチームへ。基盤構築から定着まで伴走支援。',
     description:
-      'Claude Code を活用した開発の高速化、AI エージェント／MCP の運用設計、生成 AI を組み込んだ機能実装や運用監視まで対応します。日々の受託・ラボ型開発の現場で AI を実践的に活用しています。',
+      'Claude Code をはじめとする生成 AI を開発プロセスに定着させるための、基盤構築とコンサルティングを提供します。現状のワークフロー分析・ツール選定から、Claude Code / MCP / CI への統合、コーディング規約やスキルの整備、チームへの教育・運用ルール策定までを伴走支援し、AI 駆動開発を自走できる体制づくりをご支援します。',
     icon: 'Bot',
     features: [
       {
-        title: 'AI による開発高速化',
-        description: 'Claude Code を用いた実装・テスト・レビューの効率化',
+        title: 'AI 駆動開発の導入コンサルティング',
+        description: '現状のワークフロー分析からツール選定・運用設計まで伴走',
         icon: 'Sparkles',
       },
       {
-        title: 'AI エージェント / MCP 運用',
-        description: 'マルチモデルのエージェント設計と運用',
-        icon: 'Bot',
+        title: '開発基盤の構築',
+        description: 'Claude Code / MCP / CI への統合、規約・スキルの整備',
+        icon: 'Settings2',
       },
       {
-        title: '生成 AI 機能の実装',
-        description: 'プロダクトへの生成 AI 組み込み・運用監視（Amazon Bedrock 等）',
-        icon: 'BrainCircuit',
+        title: '定着・内製化支援',
+        description: 'チーム教育と運用ルール整備で AI 駆動開発の自走を支援',
+        icon: 'Users',
       },
     ],
     workSlugs: ['d2c-multi-brand'],
+  },
+  {
+    slug: 'monitoring-automation',
+    name: '運用監視自動化',
+    tagline:
+      'エラー検知から原因の一次調査まで。AI を活用して運用監視を自動化。',
+    description:
+      'アプリケーションのエラーを検知して即座に通知し、生成 AI が原因の一次調査（影響範囲・原因仮説・修正方針の提示）までを自動で行う運用監視基盤を構築します。外部 SaaS に依存せず、クラウドのマネージドサービスと生成 AI を組み合わせ、障害対応の初動を高速化し、運用負荷を継続的に削減します。',
+    icon: 'Activity',
+    features: [
+      {
+        title: 'エラー検知と即時通知',
+        description: '構造化ログやメトリクスの異常を検知し Slack へ即時通知',
+        icon: 'BellRing',
+      },
+      {
+        title: 'AI による一次調査',
+        description:
+          '生成 AI がソースを横断調査し、原因仮説・影響範囲・修正方針を提示',
+        icon: 'BrainCircuit',
+      },
+      {
+        title: 'クラウドネイティブな監視基盤',
+        description:
+          'マネージドサービスで構築し、重複通知の抑制や自己監視まで作り込み',
+        icon: 'Cloud',
+      },
+    ],
+    examples: [
+      {
+        title: 'サウナ&ホテル「etoe」の運用監視・AI 一次調査自動化',
+        description:
+          'エラーログを検知して Slack に即時通知し、生成 AI（Claude）がソースコードを横断調査して原因仮説・影響範囲・修正方針を同じスレッドへ自動投稿。GitHub Issue 化までを自動化し、障害対応の初動を高速化しました。',
+      },
+    ],
+    workSlugs: ['etoe'],
   },
 ];
 
