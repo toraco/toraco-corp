@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 import { Section, SectionHeading } from '@/components/sections/section';
 import { company } from '@/content/company';
@@ -20,6 +21,10 @@ export default function AboutPage() {
         <p className="mt-6 max-w-2xl text-xl font-semibold text-balance">
           {company.mission}
         </p>
+      </Section>
+
+      <Section className="border-t">
+        <SectionHeading en="Vision" ja="価値観" />
         <ul className="mt-6 grid gap-4 sm:grid-cols-3">
           {company.values.map((value) => (
             <li key={value.title} className="rounded-xl border p-5">
@@ -49,20 +54,31 @@ export default function AboutPage() {
 
       <Section className="border-t">
         <h2 className="text-xl font-bold tracking-tight">代表者</h2>
-        <div className="mt-4 flex flex-col gap-2">
-          <p className="text-lg font-semibold">
-            {representative.name}
-            <span className="ml-2 text-sm font-normal text-muted-foreground">
-              {representative.title}
-            </span>
-          </p>
-          <p className="text-sm text-muted-foreground">
-            {representative.nameKana}（{representative.nameEn}）
-          </p>
-          <div className="mt-2 flex max-w-2xl flex-col gap-2 text-pretty text-muted-foreground">
-            {representative.bio.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+        <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
+          {representative.photo && (
+            <Image
+              src={representative.photo.src}
+              alt={representative.photo.alt}
+              width={representative.photo.width}
+              height={representative.photo.height}
+              className="h-auto w-40 shrink-0 rounded-xl border object-cover sm:w-48"
+            />
+          )}
+          <div className="flex flex-col gap-2">
+            <p className="text-lg font-semibold">
+              {representative.name}
+              <span className="ml-2 text-sm font-normal text-muted-foreground">
+                {representative.title}
+              </span>
+            </p>
+            <p className="text-sm text-muted-foreground">
+              {representative.nameKana}（{representative.nameEn}）
+            </p>
+            <div className="mt-2 flex max-w-2xl flex-col gap-2 text-pretty text-muted-foreground">
+              {representative.bio.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
           </div>
         </div>
       </Section>

@@ -12,4 +12,24 @@ describe('AboutPage', () => {
     expect(screen.getByText('700万円')).toBeInTheDocument();
     expect(screen.getByText(/Inagaki Takaaki/)).toBeInTheDocument();
   });
+
+  it('Vision/価値観 セクションと3つの価値観を描画する', () => {
+    render(<AboutPage />);
+    expect(screen.getByText('Vision')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: '価値観' })).toBeInTheDocument();
+    expect(screen.getByText('Be proud')).toBeInTheDocument();
+    expect(screen.getByText('Be cooperative')).toBeInTheDocument();
+    expect(screen.getByText('Be independent')).toBeInTheDocument();
+  });
+
+  it('代表者セクションがプロフィール写真を描画する', () => {
+    render(<AboutPage />);
+    expect(screen.getByRole('img', { name: /稲垣 貴映/ })).toBeInTheDocument();
+  });
+
+  it('代表者 bio が廃止済みの記述（Cloudflare 中心の高速化 / SIer）を含まない', () => {
+    render(<AboutPage />);
+    expect(screen.queryByText(/Cloudflare/)).toBeNull();
+    expect(screen.queryByText(/SIer/)).toBeNull();
+  });
 });

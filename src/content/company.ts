@@ -6,16 +6,18 @@ export const company: Company = {
   mission: '「やりたい」という原動力を、テクノロジーで実現する。',
   values: [
     {
-      title: '責務の完遂',
-      description: '自らの仕事に誇りを持ち、継続的に技術を高め続けます。',
+      title: 'Be proud',
+      description:
+        '責務を果たし、自らの仕事に誇りを持とう。ただし、誇りを持つことと慢心は違う。”やりたいけどできない” を社会から1つでも減らすために、常に技術力を磨いていこう。',
     },
     {
-      title: '顧客第一',
-      description: '思いを持つ仲間やお客様を、積極的に助けます。',
+      title: 'Be cooperative',
+      description: '“やりたい” という思いを持つ仲間やお客様を積極的に助けよう。',
     },
     {
-      title: '失敗を恐れない',
-      description: '自立して、社会課題の解決に挑み続けます。',
+      title: 'Be independent',
+      description:
+        '自立 ( = 自らの “やりたい” を実現した状態 ) で社会の ”やりたい” を実現していこう。',
     },
   ],
   profile: [
@@ -38,11 +40,17 @@ export const company: Company = {
     nameKana: 'いながき たかあき',
     nameEn: 'Inagaki Takaaki',
     title: '代表取締役',
+    photo: {
+      src: '/images/profile.webp',
+      alt: '稲垣 貴映',
+      width: 800,
+      height: 1000,
+    },
     bio: [
-      '新卒で SIer に入社後、独学でプログラミングを習得し、フロントエンドエンジニアへ転身。',
-      '2021年4月に toraco株式会社を設立し、代表取締役に就任。',
-      'React / TypeScript を主軸に、近年は Cloudflare を中心としたエッジ・高速化領域にも注力。',
-      'YouTube「とらゼミ」や登壇・執筆を通じて、Web エンジニアリングの知見を発信している。',
+      '2021年4月に toraco株式会社を創業し、代表取締役に就任。',
+      'JavaScript / TypeScript / React を中核に、Python・AWS・Firebase などフロントエンドからクラウドインフラまでの開発を担う。',
+      '受託開発・ラボ型開発に加え、テスト自動化・AI駆動開発・運用監視自動化の領域でチームを率いる。',
+      'YouTube「とらゼミ」やオンライン講座（Schoo）への登壇を通じて、Web エンジニアリングの知見を発信している。',
     ],
   },
 };
