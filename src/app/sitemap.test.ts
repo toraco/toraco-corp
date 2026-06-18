@@ -10,4 +10,9 @@ describe('sitemap', () => {
     expect(urls).toContain('https://toraco.jp/works/etoe');
     expect(urls.some((url) => url.includes('/news/'))).toBe(true);
   });
+
+  it('全ての News 記事を内部 URL に含む（Schoo も内部詳細）', () => {
+    const urls = sitemap().map((entry) => entry.url);
+    expect(urls).toContain('https://toraco.jp/news/schoo-lecture');
+  });
 });

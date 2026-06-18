@@ -10,23 +10,10 @@ export function AboutExcerpt() {
   return (
     <Section id="about">
       <SectionHeading en="About" ja="会社情報" />
-      <div className="mt-6 grid gap-8 md:grid-cols-2">
-        <div className="flex flex-col gap-5">
-          <p className="text-xl font-semibold text-balance">{company.mission}</p>
-          <ul className="flex flex-col gap-3">
-            {company.values.map((value) => (
-              <li key={value.title}>
-                <span className="font-medium">{value.title}</span>
-                <span className="block text-sm text-muted-foreground">
-                  {value.description}
-                </span>
-              </li>
-            ))}
-          </ul>
-          <Button asChild variant="outline" className="w-fit">
-            <Link href="/about">会社概要を見る</Link>
-          </Button>
-        </div>
+      <div className="mt-6 flex flex-col gap-8">
+        <p className="max-w-2xl text-xl font-semibold text-balance">
+          {company.mission}
+        </p>
         <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-3 text-sm">
           {company.profile.slice(0, 4).map((row) => (
             <Fragment key={row.label}>
@@ -35,6 +22,9 @@ export function AboutExcerpt() {
             </Fragment>
           ))}
         </dl>
+        <Button asChild variant="outline" className="w-fit">
+          <Link href="/about">会社概要を見る</Link>
+        </Button>
       </div>
     </Section>
   );

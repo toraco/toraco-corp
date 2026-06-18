@@ -13,9 +13,10 @@ describe('AboutPage', () => {
     expect(screen.getByText(/Inagaki Takaaki/)).toBeInTheDocument();
   });
 
-  it('Vision/価値観 セクションと3つの価値観を描画する', () => {
+  it('Values/価値観 セクションと3つの価値観を描画する', () => {
     render(<AboutPage />);
-    expect(screen.getByText('Vision')).toBeInTheDocument();
+    expect(screen.getByText('Values')).toBeInTheDocument();
+    expect(screen.queryByText('Vision')).toBeNull();
     expect(screen.getByRole('heading', { name: '価値観' })).toBeInTheDocument();
     expect(screen.getByText('Be proud')).toBeInTheDocument();
     expect(screen.getByText('Be cooperative')).toBeInTheDocument();

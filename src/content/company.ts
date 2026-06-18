@@ -12,7 +12,8 @@ export const company: Company = {
     },
     {
       title: 'Be cooperative',
-      description: '“やりたい” という思いを持つ仲間やお客様を積極的に助けよう。',
+      description:
+        '“やりたい” という思いを持つ仲間やお客様を積極的に助けよう。',
     },
     {
       title: 'Be independent',
@@ -37,7 +38,6 @@ export const company: Company = {
   ],
   representative: {
     name: '稲垣 貴映',
-    nameKana: 'いながき たかあき',
     nameEn: 'Inagaki Takaaki',
     title: '代表取締役',
     photo: {
