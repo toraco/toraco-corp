@@ -17,7 +17,7 @@ export type News = {
   category: NewsCategory;
   /** 公開日（ISO 8601 文字列） */
   publishedAt: string;
-  /** 本文（プレーン/簡易マークアップ） */
+  /** 本文（Markdown） */
   body: string;
   /** サムネイル画像 URL（任意） */
   thumbnail?: string;

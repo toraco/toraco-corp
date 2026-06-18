@@ -26,4 +26,11 @@ describe('NewsList', () => {
     render(<NewsList items={[]} />);
     expect(screen.getByText('現在、お知らせはありません。')).toBeInTheDocument();
   });
+
+  it('各記事を内部詳細ページへのリンクで描画する', () => {
+    render(<NewsList items={sampleNews} />);
+    const link = screen.getByRole('link', { name: /サンプルのお知らせ/ });
+    expect(link).toHaveAttribute('href', '/news/sample-1');
+    expect(link).not.toHaveAttribute('target');
+  });
 });
