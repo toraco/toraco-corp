@@ -18,16 +18,22 @@ describe('NewsDetailPage', () => {
     );
   });
 
-  it('本文を Markdown として描画する（強調・外部リンク）', async () => {
+  it('本文を Markdown として描画する（外部リンクが要素化される）', async () => {
     render(
       await NewsDetailPage({
         params: Promise.resolve({ slug: 'schoo-lecture' }),
       })
     );
-    expect(screen.getByText('実務に役立つ内容').tagName).toBe('STRONG');
-    const courseLink = screen.getByRole('link', { name: '登壇した講座を見る' });
-    expect(courseLink).toHaveAttribute('href', 'https://schoo.jp/course/7546');
+    // 生テキストではなく Markdown 由来の <a>（外部リンクは別タブ）が生成される。
+    const courseLink = screen
+      .getAllByRole('link')
+      .find(
+        (link) =>
+          link.getAttribute('href') === 'https://schoo.jp/course/7546'
+      );
+    expect(courseLink).toBeDefined();
     expect(courseLink).toHaveAttribute('target', '_blank');
+    expect(courseLink).toHaveAttribute('rel', expect.stringContaining('noopener'));
   });
 
   it('generateMetadata の description は Markdown 記号を含まない', async () => {
