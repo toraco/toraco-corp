@@ -10,6 +10,17 @@ export type CompanyValue = {
   description: string;
 };
 
+export type RepresentativePhoto = {
+  /** 画像パス（public 配下） */
+  src: string;
+  /** 代替テキスト */
+  alt: string;
+  /** 元画像の幅（px） */
+  width: number;
+  /** 元画像の高さ（px） */
+  height: number;
+};
+
 export type Representative = {
   /** 氏名（漢字） */
   name: string;
@@ -21,6 +32,8 @@ export type Representative = {
   title: string;
   /** プロフィール本文（段落の配列） */
   bio: string[];
+  /** プロフィール写真（任意） */
+  photo?: RepresentativePhoto;
 };
 
 export type Company = {
