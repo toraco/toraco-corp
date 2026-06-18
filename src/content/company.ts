@@ -48,7 +48,7 @@ export const company: Company = {
     },
     bio: [
       '2021年4月に toraco株式会社を創業し、代表取締役に就任。',
-      'JavaScript / TypeScript / React を中核に、Python・AWS・Firebase などフロントエンドからクラウドインフラまでの開発を担う。',
+      'TypeScript / Go / Python が主な開発言語であり、AWS / GCP / Cloudflare といったクラウドインフラの知見も豊富にある。フロントエンド/バックエンド/インフラの分野を横断して開発することが得意。',
       '受託開発・ラボ型開発に加え、テスト自動化・AI駆動開発・運用監視自動化の領域でチームを率いる。',
       'YouTube「とらゼミ」やオンライン講座（Schoo）への登壇を通じて、Web エンジニアリングの知見を発信している。',
     ],

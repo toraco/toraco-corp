@@ -27,9 +27,9 @@ describe('AboutPage', () => {
     expect(screen.getByRole('img', { name: /稲垣 貴映/ })).toBeInTheDocument();
   });
 
-  it('代表者 bio が廃止済みの記述（Cloudflare 中心の高速化 / SIer）を含まない', () => {
+  it('代表者 bio が廃止済みの記述（高速化への注力 / SIer 経歴）を含まない', () => {
     render(<AboutPage />);
-    expect(screen.queryByText(/Cloudflare/)).toBeNull();
+    expect(screen.queryByText(/高速化/)).toBeNull();
     expect(screen.queryByText(/SIer/)).toBeNull();
   });
 });
