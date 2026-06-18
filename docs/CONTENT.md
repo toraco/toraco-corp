@@ -70,8 +70,10 @@
 
 ## 5. お知らせ（News）
 
-- microCMS は廃止し、記事を `src/content/news/<slug>.md`（YAML frontmatter + Markdown 本文・ファイル名 = slug）で静的に管理する。`src/content/news.ts` のローダが frontmatter（`title` / `category` / `publishedAt`）を parse し、公開日の降順で返す。
+- microCMS は廃止し、記事を `src/content/news/<slug>.md`（YAML frontmatter + Markdown 本文・ファイル名 = slug）で静的に管理する。
   - frontmatter の日付は YAML の自動日付化を避けるためクォートする（例: `publishedAt: '2023-05-12'`）。
+  - ビルド時に `scripts/generate-news-data.mjs` が `.md` を parse して `src/content/news.generated.json`（生成物・git 管理外）へ変換する。`src/content/news.ts` はこの JSON を import し、公開日の降順で返す。**Cloudflare Workers には src の `.md` が存在せず実行時 `fs` が使えない**ため、ビルド時にバンドルへインライン化する方式を採る（実行時 fs 依存ゼロ）。
+  - codegen は `dev` / `build` / `build:dryrun` / `test`（`pnpm content:news`）の前段で自動実行される。`pnpm build` を経由する OpenNext の `preview` / `deploy` でも走る。
 - カテゴリ: お知らせ / プレスリリース / イベント / メディア。
 - 詳細ページ（`/news/[slug]`）は本文 Markdown を `Markdown` コンポーネント（react-markdown + remark-gfm）で描画する。本文中の外部リンク（`http(s)`）は別タブ（`target="_blank"` / `rel="noopener noreferrer"`）で開く。全記事が内部詳細ページを持つ（外部リンクのみで完結する記事は設けない）。
 - 掲載内容（公開日の降順）:
