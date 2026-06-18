@@ -14,7 +14,11 @@
     "SES_REGION": "ap-northeast-1",
     "SES_FROM_ADDRESS": "noreply@toraco.jp"
   },
-  // 本番ドメイン。初回デプロイ前に toraco.jp を Cloudflare Pages から解放しておくこと。
-  // 詳細は README の「デプロイ移行」を参照。
-  "routes": [{ "pattern": "toraco.jp", "custom_domain": true }]
+  // 本番ドメイン。初回デプロイ前に toraco.jp / www.toraco.jp を Cloudflare Pages から解放しておくこと。
+  // www は受け取った上で apex へ 308 リダイレクトする（src/middleware.ts）。
+  // 詳細は docs/DEPLOYMENT.md を参照。
+  "routes": [
+    { "pattern": "toraco.jp", "custom_domain": true },
+    { "pattern": "www.toraco.jp", "custom_domain": true }
+  ]
 }
