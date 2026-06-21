@@ -21,19 +21,37 @@ describe('works コンテンツ', () => {
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
-  it('etoe は実名・公開URL を持つ', () => {
-    const etoe = getWorkBySlug('etoe');
-    expect(etoe).toBeDefined();
-    expect(etoe?.isAnonymous).toBe(false);
-    expect(etoe?.clientName).toBe('etoe sauna & hotel');
-    expect(etoe?.url).toContain('etoehotel.com');
+  it('宿泊施設 PMS 事例は匿名で事業名・公開URL を持たない', () => {
+    const pms = getWorkBySlug('hospitality-pms');
+    expect(pms).toBeDefined();
+    expect(pms?.isAnonymous).toBe(true);
+    expect(pms?.clientName).toBeUndefined();
+    expect(pms?.url).toBeUndefined();
   });
 
-  it('etoe は運用監視（エラー検知・AI 一次調査）の取り組みを含む', () => {
-    const etoe = getWorkBySlug('etoe');
-    const text = [etoe?.solution, ...(etoe?.results ?? [])].join(' ');
+  it('全事例が事業名・固有ドメインを掲載しない', () => {
+    const text = works
+      .map((work) =>
+        [
+          work.title,
+          work.summary,
+          work.clientName,
+          work.url,
+          work.challenge,
+          work.solution,
+          ...work.results,
+        ].join(' ')
+      )
+      .join(' ');
+    expect(text).not.toMatch(/etoe/i);
+    expect(text).not.toMatch(/etoehotel/i);
+  });
+
+  it('宿泊施設 PMS 事例は運用監視（エラー検知・AI 一次調査）の取り組みを含む', () => {
+    const pms = getWorkBySlug('hospitality-pms');
+    const text = [pms?.solution, ...(pms?.results ?? [])].join(' ');
     expect(text).toMatch(/運用監視|一次調査/);
-    expect(etoe?.serviceSlugs).toContain('monitoring-automation');
+    expect(pms?.serviceSlugs).toContain('monitoring-automation');
   });
 
   it('匿名事例は isAnonymous=true で業種が特定される語を含まない', () => {

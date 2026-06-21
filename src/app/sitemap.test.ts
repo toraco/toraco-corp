@@ -7,7 +7,7 @@ describe('sitemap', () => {
     const urls = sitemap().map((entry) => entry.url);
     expect(urls).toContain('https://toraco.jp');
     expect(urls).toContain('https://toraco.jp/contact');
-    expect(urls).toContain('https://toraco.jp/works/etoe');
+    expect(urls).toContain('https://toraco.jp/works/hospitality-pms');
     expect(urls.some((url) => url.includes('/news/'))).toBe(true);
   });
 

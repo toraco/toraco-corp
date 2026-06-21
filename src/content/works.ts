@@ -4,13 +4,11 @@ import type { Work } from '@/domains/works';
 // 業種が特定されうる語（広告 / SSP / 通信 / WiFi 等）を本文に含めない。
 export const works: Work[] = [
   {
-    slug: 'etoe',
-    title: 'etoe sauna & hotel 予約・施設管理プラットフォーム',
+    slug: 'hospitality-pms',
+    title: '宿泊施設向け 予約・施設管理プラットフォーム',
     summary:
       '宿泊予約から施設運営までを一気通貫で支える PMS を、フロントエンドからクラウドインフラまで内製しました。',
-    isAnonymous: false,
-    clientName: 'etoe sauna & hotel',
-    url: 'https://etoehotel.com',
+    isAnonymous: true,
     challenge:
       'OTA と自社予約サイトの在庫を二重管理する負担や、入退室・清掃オペレーションの煩雑さといった、宿泊施設運営の現場課題を解消する必要がありました。',
     solution:
