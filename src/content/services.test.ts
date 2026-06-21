@@ -56,14 +56,15 @@ describe('services コンテンツ', () => {
     expect(text).toContain('コンサル');
   });
 
-  it('運用監視自動化が etoe の導入事例を持つ', () => {
+  it('運用監視自動化が宿泊施設 PMS の匿名導入事例を持つ', () => {
     const monitoring = getServiceBySlug('monitoring-automation');
     expect(monitoring).toBeDefined();
     expect(monitoring?.examples?.length).toBeGreaterThan(0);
     const exampleText =
       monitoring?.examples?.map((e) => e.title).join(' ') ?? '';
-    expect(exampleText).toContain('etoe');
-    expect(monitoring?.workSlugs).toContain('etoe');
+    expect(exampleText).toContain('宿泊施設');
+    expect(exampleText).not.toMatch(/etoe/i);
+    expect(monitoring?.workSlugs).toContain('hospitality-pms');
   });
 
   it('getServiceBySlug は未知 slug で undefined を返す', () => {
